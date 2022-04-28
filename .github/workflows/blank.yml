@@ -1,0 +1,19 @@
+- name: Democracy Enforcer
+  # You may pin to the exact commit or the version.
+  # uses: deuzu/github-democrat-action@5a67101a44a9527457796e6fa4013919c082856e
+  uses: deuzu/github-democrat-action@0.3.0-alpha
+  with:
+    # The Github token that give permission on the repository.
+    githubToken: 
+    # The Github usernames (separated by coma) of allowed voters. /!\ Not specifying any voters allows every Github user to vote /!\
+    voters: # optional
+    # When `dryRun: true` the Github democrat won't merge any pull requests
+    dryRun: # optional
+    # The minimum pull request review score needed to be eligible for merge (approves +1, request changes -1)
+    prMinimumReviewScore: # optional, default is 1
+    # The delay (in hours and since the last commit) needed before a pull request is eligible for merge
+    prVotingTimeHours: # optional, default is 24
+    # The pull request label needed to be eligible for merge
+    prMarkAsMegeableLabel: # optional, default is ready
+    # The pull request target branch
+    prTargetBranch: # optional, default is main
